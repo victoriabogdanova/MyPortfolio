@@ -9,7 +9,6 @@ hovers.forEach(hover => {
     hover.addEventListener('mouseout', () => {
         const lamp = document.getElementById(`lamp${hover.id}`)
         const theme = document.getElementById('themeBtn').className
-        console.log(theme)
         if (theme == 'light') {   
             lamp.src = `assets/lamp${hover.id}.png`
         } else if (theme == 'dark') {
@@ -42,7 +41,9 @@ document.getElementById('playlist').addEventListener('click', () => {
 const btnProject1 = document.getElementById('proj1btn')
 btnProject1.addEventListener('mouseover', () => {
     btnProject1.src = 'assets/proj1btnPressed.png'
-    window.open("https://remtadesign.store")
+    for (let i=0; i < 1; i++) {
+        window.open("https://remtadesign.store")
+    }
 })
 btnProject1.addEventListener('mouseout', () => {
     btnProject1.src = 'assets/proj1btn.png'
@@ -100,7 +101,6 @@ projectPics.forEach(pic => {
 const themeBtn = document.getElementById('themeBtn')
 themeBtn.addEventListener('click', () => changeColorTheme(themeBtn.className))
 function changeColorTheme(mode) {
-    console.log(mode)
     if (mode == "light") {
         document.querySelector('nav').style.backgroundColor = "var(--bgcolorDM)"
         document.body.style.backgroundColor = "var(--bgcolorDM)"
