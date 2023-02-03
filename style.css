@@ -318,9 +318,9 @@ nav div {
 }
 
 .intro {
-    position: absolute;
-    left: 300px;
-    bottom: 140px;
+    position: relative;
+    top: 630px;
+    left: 320px;
     z-index: 1;
     display: flex;
     flex-direction: column;
