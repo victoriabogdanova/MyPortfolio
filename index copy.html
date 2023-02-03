@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/fullpage.js/dist/fullpage.css" />
+    <title>Victoria's Portfolio</title>
+</head>
+<body>
+    <div class="fullpage">
+        <div class="section">
+            <div class="home">
+                <nav>
+                    <div class="mode"><img src="/assets/moon.png"></div>
+                    <button id="btnAbout">About</button>
+                    <button id="btnProjects">Projects</button>
+                    <button id="btnResume">Resume</button>
+                </nav>
+                <div class="line short-line"></div>
+                <div class="logo">
+                    <img src="/assets/VB.png" alt="VB">
+                </div>
+                <div class="line long-line"></div>
+
+                <img id="lampYellow" src="/assets/lampYellow.png" class="lamp"/>
+                <div id="Yellow" class="hover hoverYellow"></div>
+
+                <img id="lampOrange" src="/assets/lampOrange.png" class="lamp"/>
+                <div id="Orange" class="hover hoverOrange"></div>
+
+                <img id="lampBlue" src="/assets/lampBlue.png" class="lamp"/>
+                <div id="Blue" class="hover hoverBlue"></div>
+
+                <img id="lampPink" src="/assets/lampPink.png" class="lamp"/>
+                <div id="Pink" class="hover hoverPink"></div>
+
+                <img id="lampPurple" src="/assets/lampPurple.png" class="lamp"/>
+                <div id="Purple" class="hover hoverPurple"></div>
+
+                <div class="portrait-container">
+                    <img class="portrait" src="/assets/portrait.png" alt=""/>
+                </div>
+                <div class="intro">
+                    <p class="bigText margin-right" id="p1">Hi  there  </p>
+                    <p class="bigText green">:)</p>
+                    <p class="bigText" id="p2">My  name  is </p>
+                    <p class="bigText green">Victoria</p>
+                    <p class="smallText green bold" id="p3">I'm a designer </p>
+                    <p class="smallText">with a background in psychology, who uses</p>
+                    <p class="smallText"> a deeply empathetic approach to solve problems and </p>
+                    <p class="smallText green bold">create things that matter</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="about">
+                <nav>
+                    <div class="mode">
+                        <img src="/assets/moon.png">
+                    </div>
+                    <button id="btnAbout">About</button>
+                    <button id="btnProjects">Projects</button>
+                    <button id="btnResume">Resume</button>
+                </nav>
+                <!-- <p class="bigText underlined">I'm Vicky</p>
+                <div class="text">
+                    <p class="smallText">A freelance </p><p class="green bold">UX/UI  designer</p><p class="smallText">currently helping small businesses in my hometown establish a digital presence and connect better with their customers.</p>
+                        My journey started in 2022 when I discovered the <p class="green bold">Google UX Design Certificate</p> and immediately fell in love with the field. Since then I've been combining the knowledge in <p class="green bold">psychology</p> with my previous experience in <p class="green bold">customer-facing positions</p> to design with <p class="green bold">real people</p> in mind.
+                        <br>As someone with an <p class="green bold">INFJ</p> personality type my main motivation is to be the <p class="green bold">empathetic link</p> between a product and its users. I care deeply about <p class="green bold">human behavior</p> and how it influences our <p class="green bold">design decisions</p>, which is why I'm very passionate about <p class="green bold">research</p>. By putting away our own opinions and <p class="green bold">listening to what others have to say</p> we acquire a new understanding that is often <p class="green bold">the key to improvement</p>. I think this notion allows not only <p class="green bold">empathy</p>, but also <p class="green bold">equity</p> and <p class="green bold">accessibility</p> to become a part of the story.
+                        <br>When I'm not working I like spending quality time with my friends and family, but you can also find me sitting at my desk <p class="green bold">listening to music</p> while I'm reading, drawing or playing video games.
+                    </p>
+                </div>
+                <h2>My current playlist</h2>
+                <img src="spotify logo" alt="playlist">
+                <div id="p4">
+                    <p>Have an interesting project for me or just want to chat?</p>
+                    <p class="green bold">Drop me a line!</p>
+                </div> -->
+                <img src="/assets/aboutHeading.png" alt="I'm Vicky">
+                <img src="/assets//aboutText.png" alt="A freelance  UX/UI  designer currently helping small businesses in my hometown establish a digital presence and connect better with their customers. My journey started in 2022 when I discovered the Google UX Design Certificate and immediately fell in love with the field. Since then I've been combining the knowledge in psychology with my previous experience in customer-facing positions to design with real people in mind. As someone with an INFJ personality type my main motivation is to be the empathetic link between a product and its users. I care deeply about human behavior and how it influences our design decisions,  which is why I'm very passionate about research. By putting away our own opinions and listening to what others have to say we acquire a new understanding that is often the key to improvement. I think this notion allows not only empathy, but also equity and accessibility to become a part of the story. When I'm not working I like spending quality time with my friends and family, but you can also find me sitting at my desk listening to music while I'm reading, drawing or playing video games.">
+                <img src="/assets/playlist.png" alt="My current playlist">
+                <img id="" src="/assets/spotify.png" alt="link">
+                <img src="/assets/formIntro.png" alt="Have an interesting project for me or just want to chat? Drop me a line!">
+                <div class="form">
+                    <div className="input-placeholder">
+                        <input name="name" id="name" class="input" type="text" required>
+                        <div className="placeholder">Name<span>*</span></div>
+                    </div>
+                    <div className="input-placeholder">
+                        <input name="email" id="email" class="input" type="email" required>
+                        <div className="placeholder">Email<span>*</span></div>
+                    </div>
+                    <div className="input-placeholder">
+                        <input name="subject" id="subject" className="input" type="text" required/>
+                        <div className="placeholder">Subject<span>*</span></div>
+                    </div>
+                    <p>Message</p>
+                    <input name="message" id="message" class="input" type="text">
+                    <button id="send" class="button" type="submit">SEND</button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="projects"></div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+    <script type="text/javascript" src="/node_modules/fullpage.js/dist/fullpage.js"></script>
+</body>
+</html>
