@@ -47,7 +47,7 @@ btnProject1.addEventListener('mouseout', () => {
 })
 btnProject1.addEventListener('click', () => {
     window.open("https://remtadesign.store")
-}
+})
 
 const btnSend = document.getElementById('send')
 btnSend.addEventListener('mousedown', () => {
