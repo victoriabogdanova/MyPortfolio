@@ -165,7 +165,7 @@ function changeColorTheme(mode) {
         document.getElementById('logo').src = 'assets/VB_l.png'
 
         document.querySelectorAll('.lamp').forEach(lamp => {
-            lamp.src = `/assets/${lamp.id}.png`
+            lamp.src = `assets/${lamp.id}.png`
         })
         document.querySelector('.portrait').src = "assets/portrait.png"
         document.querySelector('.bigIntro_d').className = 'bigIntro'
