@@ -2,7 +2,7 @@ const hovers = document.querySelectorAll('.hover')
 hovers.forEach(hover => {
     hover.addEventListener('mouseover', () => {
         const lamp = document.getElementById(`lamp${hover.id}`)
-        lamp.src = `/assets/${lamp.id}On.png`
+        lamp.src = `assets/${lamp.id}On.png`
         lamp.style.top = '50px'
     })
 
@@ -11,9 +11,9 @@ hovers.forEach(hover => {
         const theme = document.getElementById('themeBtn').className
         console.log(theme)
         if (theme == 'light') {   
-            lamp.src = `/assets/lamp${hover.id}.png`
+            lamp.src = `assets/lamp${hover.id}.png`
         } else if (theme == 'dark') {
-            lamp.src = `/assets/lamp${hover.id}_d.png`
+            lamp.src = `assets/lamp${hover.id}_d.png`
         }
 
         lamp.style.top = '0'
@@ -41,11 +41,11 @@ document.getElementById('playlist').addEventListener('click', () => {
 
 const btnProject1 = document.getElementById('proj1btn')
 btnProject1.addEventListener('mouseover', () => {
-    btnProject1.src = '/assets/proj1btnPressed.png'
+    btnProject1.src = 'assets/proj1btnPressed.png'
     window.open("https://remtadesign.store")
 })
 btnProject1.addEventListener('mouseout', () => {
-    btnProject1.src = '/assets/proj1btn.png'
+    btnProject1.src = 'assets/proj1btn.png'
 })
 
 const btnSend = document.getElementById('send')
@@ -59,21 +59,20 @@ btnSend.addEventListener('mouseup', () => {
 })
 
 const projectPics = document.querySelectorAll('.project-img')
-console.log(projectPics)
 projectPics.forEach(pic => {
     pic.addEventListener('mouseover', () => {
         const theme = document.getElementById('themeBtn').className
         if (theme == 'light') {
-            pic.src = `/assets/${pic.id}col.png`
+            pic.src = `assets/${pic.id}col.png`
             if (pic.id == 'pic2' || pic.id == 'pic3') {
                 const cs = document.getElementById(`comingsoon${pic.id}`)
-                cs.src = '/assets/comingsooncol.png'
+                cs.src = 'assets/comingsooncol.png'
             }
         } else if (theme == 'dark') {
-            pic.src = `/assets/dark/${pic.id}col.png`
+            pic.src = `assets/dark/${pic.id}col.png`
             if (pic.id == 'pic2' || pic.id == 'pic3') {
                 const cs = document.getElementById(`comingsoon${pic.id}`)
-                cs.src = '/assets/dark/comingsooncol.png'
+                cs.src = 'assets/dark/comingsooncol.png'
             }
         }
     })
@@ -81,16 +80,16 @@ projectPics.forEach(pic => {
     pic.addEventListener('mouseout', () => {
         const theme = document.getElementById('themeBtn').className
         if (theme == 'light') {
-            pic.src = `/assets/${pic.id}.png`
+            pic.src = `assets/${pic.id}.png`
             if (pic.id == 'pic2' || pic.id == 'pic3') {
                 const cs = document.getElementById(`comingsoon${pic.id}`)
-                cs.src = '/assets/comingsoon.png'
+                cs.src = 'assets/comingsoon.png'
             }
         } else if (theme == 'dark') {
-            pic.src = `/assets/dark/${pic.id}.png`
+            pic.src = `assets/dark/${pic.id}.png`
             if (pic.id == 'pic2' || pic.id == 'pic3') {
                 const cs = document.getElementById(`comingsoon${pic.id}`)
-                cs.src = '/assets/dark/comingsoon.png'
+                cs.src = 'assets/dark/comingsoon.png'
             }
         }
 
@@ -106,7 +105,7 @@ function changeColorTheme(mode) {
         document.querySelector('nav').style.backgroundColor = "var(--bgcolorDM)"
         document.body.style.backgroundColor = "var(--bgcolorDM)"
 
-        document.getElementById('themeBtn').src = "/assets/sun.png"
+        document.getElementById('themeBtn').src = "assets/sun.png"
         document.querySelectorAll('.nav-button').forEach(btn => {
             btn.className = 'nav-button-dark'
         })
@@ -116,16 +115,14 @@ function changeColorTheme(mode) {
         document.querySelectorAll('.line_l').forEach(line => {
             line.className = 'line_d'
         })
-        document.getElementById('logo').src = '/assets/VB_d.png'
+        document.getElementById('logo').src = 'assets/VB_d.png'
 
         document.querySelectorAll('.lamp').forEach(lamp => {
-            console.log()
-            lamp.src = `/assets/${lamp.id}_d.png`
+            lamp.src = `assets/${lamp.id}_d.png`
         })
-        document.querySelector('.portrait').src = "/assets/portrait_d.png"
+        document.querySelector('.portrait').src = "assets/portrait_d.png"
         document.querySelector('.bigIntro').className = 'bigIntro_d'
-        // document.querySelector('.smallIntro').className = 'smallIntro_d'
-        document.getElementById('smallIntro').src = "/assets/dark/smallIntro.png"
+        document.getElementById('smallIntro').src = "assets/dark/smallIntro.png"
 
         let greens = document.querySelectorAll('.green')
         for (let i=0; i < greens.length; i++) {
@@ -133,19 +130,19 @@ function changeColorTheme(mode) {
             greens[i].classList.add("green_d")
         }
 
-        document.getElementById('aboutHeading').src = "/assets/dark/aboutHeading.png"
-        document.getElementById('aboutText').src = "/assets/dark/aboutText.png"
-        document.getElementById('myPlaylist').src = "/assets/dark/playlist.png"
-        document.getElementById('formIntro').src = "/assets/dark/formIntro.png"
+        document.getElementById('aboutHeading').src = "assets/dark/aboutHeading.png"
+        document.getElementById('aboutText').src = "assets/dark/aboutText.png"
+        document.getElementById('myPlaylist').src = "assets/dark/playlist.png"
+        document.getElementById('formIntro').src = "assets/dark/formIntro.png"
         document.getElementById('form').className = "form_d"
 
-        document.getElementById('projectsHeading').src = "/assets/dark/projectsHeading.png"
-        document.getElementById('pic1').src = "/assets/dark/pic1.png"
-        document.getElementById('pic2').src = "/assets/dark/pic2.png"
-        document.getElementById('pic3').src = "/assets/dark/pic3.png"
-        document.getElementById('desc1').src = "/assets/dark/proj1.png"
-        document.getElementById('desc2').src = "/assets/dark/proj2.png"
-        document.getElementById('desc3').src = "/assets/dark/proj3.png"
+        document.getElementById('projectsHeading').src = "assets/dark/projectsHeading.png"
+        document.getElementById('pic1').src = "assets/dark/pic1.png"
+        document.getElementById('pic2').src = "assets/dark/pic2.png"
+        document.getElementById('pic3').src = "assets/dark/pic3.png"
+        document.getElementById('desc1').src = "assets/dark/proj1.png"
+        document.getElementById('desc2').src = "assets/dark/proj2.png"
+        document.getElementById('desc3').src = "assets/dark/proj3.png"
         document.querySelectorAll('.project-border').forEach(border => {
             border.className = "project-border_d"
         })
@@ -155,7 +152,7 @@ function changeColorTheme(mode) {
         document.querySelector('nav').style.backgroundColor = "var(--bgcolor)"
         document.body.style.backgroundColor = "var(--bgcolor)"
 
-        document.getElementById('themeBtn').src = "/assets/moon.png"
+        document.getElementById('themeBtn').src = "assets/moon.png"
         document.querySelectorAll('.nav-button-dark').forEach(btn => {
             btn.className = 'nav-button'
         })
@@ -165,15 +162,14 @@ function changeColorTheme(mode) {
         document.querySelectorAll('.line_d').forEach(line => {
             line.className = 'line_l'
         })
-        document.getElementById('logo').src = '/assets/VB_l.png'
+        document.getElementById('logo').src = 'assets/VB_l.png'
 
         document.querySelectorAll('.lamp').forEach(lamp => {
             lamp.src = `/assets/${lamp.id}.png`
         })
-        document.querySelector('.portrait').src = "/assets/portrait.png"
+        document.querySelector('.portrait').src = "assets/portrait.png"
         document.querySelector('.bigIntro_d').className = 'bigIntro'
-        // document.querySelector('.smallIntro_d').className = 'smallIntro'
-        document.getElementById('smallIntro').src = "/assets/smallIntro.png"
+        document.getElementById('smallIntro').src = "assets/smallIntro.png"
 
         let greens = document.querySelectorAll('.green_d')
         for (let i=0; i < greens.length; i++) {
@@ -181,19 +177,19 @@ function changeColorTheme(mode) {
             greens[i].classList.add("green")
         }
 
-        document.getElementById('aboutHeading').src = "/assets/aboutHeading.png"
-        document.getElementById('aboutText').src = "/assets/aboutText.png"
-        document.getElementById('myPlaylist').src = "/assets/playlist.png"
-        document.getElementById('formIntro').src = "/assets/formIntro.png"
+        document.getElementById('aboutHeading').src = "assets/aboutHeading.png"
+        document.getElementById('aboutText').src = "assets/aboutText.png"
+        document.getElementById('myPlaylist').src = "assets/playlist.png"
+        document.getElementById('formIntro').src = "assets/formIntro.png"
         document.getElementById('form').className = "form"
 
-        document.getElementById('projectsHeading').src = "/assets/projectsHeading.png"
-        document.getElementById('pic1').src = "/assets/pic1.png"
-        document.getElementById('pic2').src = "/assets/pic2.png"
-        document.getElementById('pic3').src = "/assets/pic3.png"
-        document.getElementById('desc1').src = "/assets/proj1.png"
-        document.getElementById('desc2').src = "/assets/proj2.png"
-        document.getElementById('desc3').src = "/assets/proj3.png"
+        document.getElementById('projectsHeading').src = "assets/projectsHeading.png"
+        document.getElementById('pic1').src = "assets/pic1.png"
+        document.getElementById('pic2').src = "assets/pic2.png"
+        document.getElementById('pic3').src = "assets/pic3.png"
+        document.getElementById('desc1').src = "assets/proj1.png"
+        document.getElementById('desc2').src = "assets/proj2.png"
+        document.getElementById('desc3').src = "assets/proj3.png"
         document.querySelectorAll('.project-border_d').forEach(border => {
             border.className = "project-border"
         })
