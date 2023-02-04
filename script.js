@@ -42,10 +42,12 @@ document.getElementById('playlist').addEventListener('click', () => {
 const btnProject1 = document.getElementById('proj1btn')
 btnProject1.addEventListener('mouseover', () => {
     btnProject1.src = '/assets/proj1btnPressed.png'
-    window.open("https://remtadesign.store")
 })
 btnProject1.addEventListener('mouseout', () => {
     btnProject1.src = '/assets/proj1btn.png'
+})
+btnProject1.addEventListener('click', () => {
+    window.open("https://remtadesign.store")
 })
 
 const btnSend = document.getElementById('send')
