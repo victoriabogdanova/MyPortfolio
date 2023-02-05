@@ -25,7 +25,7 @@ body {
 .section {
     width: 100vw;
     height: fit-content;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .header {
@@ -59,16 +59,12 @@ body {
     z-index: 100;
 }
 nav {
-    /* position: fixed; */
-    /* top: 0; right: 0; */
-    /* width: 100%; */
     position: relative;
     float: right;
     width: 50%;
     height: 50px;
     z-index: 1;
     background-color: var(--bgcolor);
-    /* text-align: center; */
 }
 nav ul {
     margin: 0;
@@ -103,28 +99,6 @@ a {
     text-decoration: none;
     color: var(--brown);
 }
-
-/* #btnAboutUnderline {
-    display: none;
-    border: 2px solid var(--green);
-    position: relative;
-
-}
-#btnProjectsUnderline {
-    display: none;
-    border: 2px solid var(--green);
-    position: relative;
-}
-#btnContactUnderline {
-    display: none;
-    border: 2px solid var(--green);
-    position: relative;
-}
-#btnResumeUnderline {
-    display: none;
-    border: 2px solid var(--green);
-    position: relative;
-} */
 .underline {
     display: none;
     border: 2px solid var(--green);
@@ -137,11 +111,8 @@ a {
     top: 4px;
 }
 #btnAbout {
-    /* position: absolute; */
     width: fit-content;
     height: 30px;
-    /* right: 460px; */
-    /* top: 41px; */
     position: relative;
     top: 5px;
 }
@@ -175,14 +146,11 @@ a {
     line-height: 30px;
     letter-spacing: -0.02em;
     font-feature-settings: 'calt' off;
-    /* color: var(--brown); */
 }
 
 /* Logo and line */
 
 .line_l {
-    /* position: fixed; */
-    /* top: 80px; */
     position: relative;
     border: 1px solid var(--brown);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -190,8 +158,6 @@ a {
     z-index: -1;
 }
 .line_d {
-    /* position: fixed; */
-    /* top: 80px; */
     position: relative;
     border: 1px solid var(--light);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -206,8 +172,6 @@ a {
 
 .logo {
     position: relative;
-    /* top: 60px; */
-    /* left: 167px; */
     width: 95px;
     height: fit-content;
     top: 31px;
@@ -218,7 +182,7 @@ a {
 #long-line {
     left: 260px;
     top: -4px;
-    width: 85%;
+    width: 86%;
 }
 
 /* ------------------------------------------------------ Home page ------------------------------------------------------ */
@@ -242,8 +206,7 @@ a {
     width: 261px;
     height: 933px;
     left: 23px;
-    /* left: 23px; */
-    /* top: 0px; */
+    top: 0;
 }
 .hoverYellow {
     position: absolute;
@@ -264,7 +227,7 @@ a {
     position: absolute;
     width: 190px;
     height: 770px;
-    right: 622px;
+    left: 1100px;
     top: 0;
 }
 
@@ -279,7 +242,7 @@ a {
     position: absolute;
     width: 165px;
     height: 690px;
-    right: 430px;
+    left: 1300px;
     top: 0;
 }
 
@@ -287,14 +250,15 @@ a {
     position: absolute;
     width: 301px;
     height: 977px;
-    right: 215px;
+    /* right: 215px; */
+    left: 1404px;
     top: 0px;
 }
 .hoverPink {
     position: absolute;
     width: 165px;
     height: 780px;
-    right: 245px;
+    left: 1510px;
     top: 0;
 }
 
@@ -309,7 +273,7 @@ a {
     position: absolute;
     width: 160px;
     height: 650px;
-    right: 33px;
+    left: 1713px;
     top: 0px;
 }
 
@@ -407,30 +371,35 @@ a {
 
 #about {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
+    height: 90vh;
     font-family: var(--josefin);
     display: block;
-    margin-top: 100px;
+    /* z-index: -1; */
+    position: relative;
+    /* margin-top: 100px; */
 }
 
 #about-header {
+    position: relative;
     top: 100px;
 }
 
 .about {
     width: 100%;
     height: fit-content;
-    z-index: -1;
+    /* z-index: -1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 15%;
+    /* pointer-events: none; */
 } 
 
 #aboutText {
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom: 5%;
 }
 #playlist {
@@ -438,75 +407,105 @@ a {
     cursor: pointer;
 }
 
-
-
-
 /* ------------------------------------------------------ Projects page ------------------------------------------------------ */
 
 #projects {
     width: 100vw;
     height: 100vh;
     font-family: var(--josefin);
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
+    display: block;
 }
 
 #projects-header {
-    /* width: 100%;
-    font-size: 58px;
-    font-weight: 400;
-    text-decoration: underline;
-    color: var(--brown);
-    position: relative; */
-    top: 50px;
-    /* text-align: center; */
-}
-
-.projects {
-    height: fit-content;
-    width: 100vw;
-    overflow-x: hidden;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    top: 10px;
+    top: 100px;
+    margin-bottom: 15px;
 }
 
+#projects h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--brown);
+}
+#live {
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+    top: 90px;
+    right: 530px;
+    line-height: 48px;
+}
+#comingsoon {
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+    top: 20px;
+    right: 596px;
+    line-height: 48px;
+}
+
+#project-btn1 {
+    top: 162px;
+    right: 570px;
+    cursor: pointer;
+}
+
+.project-btn {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+}
 .project {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1017px;
-    height: 243px;
-    margin: 5px;
+    margin: 20px auto;
+    height: 200px;
+    width: 920px;
 }
 
 .project-img {
-    margin-right: 5px;
-}
-
-.project-desc-btn {
-    /* width: 812px;
-    height: 232px; */
-    margin-left: 5px;
-    height: 243px;
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
 }
 .project-desc {
-    /* margin: 20px; */
+    width: 680px;
+    height: 200px;
+    float: right;
+}
+.project-desc h3 {
+    margin-top: 3px;
+}
+.project-desc p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.role {
+    width: 50%;
+    float: left;
+    align-items: start;
+}
+.role p {
+    margin-right: 5px;
+}
+.timeline {
+    width: fit-content;
+    float: right;
+    justify-content: end;
+}
+.timeline p {
+    margin-left: 5px;
+}
+.small-header {
+    color: var(--brown);
+}
+.desc {
     position: relative;
-    top: 0; left: 0;
+    top: 20px;
 }
 
-#proj1btn {
-    position: relative;
-    bottom: 60px;
-    left: 310px;
-}
 
 /* ------------------------------------------------------ Contact page ------------------------------------------------------ */
 
@@ -514,17 +513,11 @@ a {
     width: 100vw;
     font-family: var(--josefin);
     display: block;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 #contact-header {
-    /* width: 100%;
-    font-size: 58px;
-    font-weight: 400;
-    text-decoration: underline;
-    color: var(--brown);
-    position: relative; */
-    top: 10px;
-    /* text-align: center; */
+    position: relative; 
+    top: 20px;
 }
 
 .contact {
@@ -649,6 +642,7 @@ span {
     font-style: var(--josefin);
     letter-spacing: 0.03em;
     font-feature-settings: 'calt' off;  
+    cursor: pointer;
 }
 
 /* Utility classes */
@@ -667,4 +661,11 @@ span {
 }
 .brown {
     color: var(--brown);
+}
+.orange {
+    color: #FF5E30;
+    margin-right: 0;
+}
+.orange_d {
+    color: #FD8967;
 }

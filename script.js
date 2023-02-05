@@ -1,3 +1,4 @@
+// Lamp hover events
 const hovers = document.querySelectorAll('.hover')
 hovers.forEach(hover => {
     hover.addEventListener('mouseover', () => {
@@ -12,44 +13,115 @@ hovers.forEach(hover => {
         if (theme == 'light') {   
             lamp.src = `assets/lamp${hover.id}.png`
         } else if (theme == 'dark') {
-            lamp.src = `assets/lamp${hover.id}_d.png`
+            lamp.src = `assets/dark/lamp${hover.id}.png`
         }
 
         lamp.style.top = '0'
     })
 })
 
+// Nav button hover events
 const navButtons = document.querySelectorAll('.navBtnEvents')
 navButtons.forEach(button => {
     button.addEventListener('mouseover', () => {
         document.getElementById(`${button.id}Underline`).style.display = 'block'
+
+        if (button.id == 'btnAbout') {
+            const lamp = document.getElementById('lampOrange')
+            lamp.src = `assets/${lamp.id}On.png`
+            lamp.style.top = '50px'
+        } else if (button.id == 'btnProjects') {
+            const lamp = document.getElementById('lampBlue')
+            lamp.src = `assets/${lamp.id}On.png`
+            lamp.style.top = '50px'
+        } else if (button.id == 'btnContact') {
+            const lamp = document.getElementById('lampPink')
+            lamp.src = `assets/${lamp.id}On.png`
+            lamp.style.top = '50px'
+        } else if (button.id == 'btnResume') {
+            const lamp = document.getElementById('lampPurple')
+            lamp.src = `assets/${lamp.id}On.png`
+            lamp.style.top = '50px'
+        }
     })
 
     button.addEventListener('mouseout', () => {
         document.getElementById(`${button.id}Underline`).style.display = 'none'
+
+        const theme = document.getElementById('themeBtn').className
+
+        if (button.id == 'btnAbout') {
+            const lamp = document.getElementById('lampOrange')
+            if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
+            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+            lamp.style.top = '0'
+        }
+        else if (button.id == 'btnProjects') {
+            const lamp = document.getElementById('lampBlue')
+            if (theme == 'light')  { lamp.src = `assets/${lamp.id}.png` }
+            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+            lamp.style.top = '0'
+        }
+        else if (button.id == 'btnContact') {
+            const lamp = document.getElementById('lampPink')
+            if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
+            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+            lamp.style.top = '0'
+        }
+        else if (button.id == 'btnResume') {
+            const lamp = document.getElementById('lampPurple')
+            if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
+            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+            lamp.style.top = '0'
+        }
     })
 })
 
+// Resume link
 document.getElementById('btnResume').addEventListener('click', () => {
     window.open("https://drive.google.com/file/d/1ZZ1ZRyseZQNzLR09vEH5gW3vftXYnLwn/view?usp=share_link")
 })
 
+// Spotify playlist link
 document.getElementById('playlist').addEventListener('click', () => {
     window.open("https://open.spotify.com/playlist/64hGTqDBjloKi8mrOgtKqw?si=7eNKOET-Qe6U57iTVWFpZg")
 })
 
-const btnProject1 = document.getElementById('proj1btn')
-btnProject1.addEventListener('mouseover', () => {
-    btnProject1.src = 'assets/proj1btnPressed.png'
+// Project picture hover events
+const projectImgs = document.querySelectorAll('.project-img')
+projectImgs.forEach(img => {
+    img.addEventListener('mouseover', () => {
+        const theme = document.getElementById('themeBtn').className
+        if (theme == 'light') {
+            img.src = `assets/${img.id}-col.png`
+        } else if (theme == 'dark') {
+            img.src = `assets/dark/${img.id}-col.png`
+        }
+    })
+
+    img.addEventListener('mouseout', () => {
+        const theme = document.getElementById('themeBtn').className
+        if (theme == 'light') {
+            img.src = `assets/${img.id}.png`
+        } else if (theme == 'dark') {
+            img.src = `assets/dark/${img.id}.png`
+        }
+    })
 })
-btnProject1.addEventListener('mouseout', () => {
-    btnProject1.src = 'assets/proj1btn.png'
+
+// Project button hover and click events
+const projectBtn1 = document.getElementById('project-btn1')
+projectBtn1.addEventListener('mouseover', () => {
+    projectBtn1.src = 'assets/project-btn1-pressed.png'
 })
-btnProject1.addEventListener('click', () => {
+projectBtn1.addEventListener('mouseout', () => {
+    projectBtn1.src = 'assets/project-btn1.png'
+})
+projectBtn1.addEventListener('click', () => {
     window.open("https://remtadesign.store")
 })
 
-
+// Form submit button events
 const btnSend = document.getElementById('send')
 btnSend.addEventListener('mousedown', () => {
     btnSend.style.backgroundColor = '#40684B'
@@ -58,29 +130,6 @@ btnSend.addEventListener('mousedown', () => {
 btnSend.addEventListener('mouseup', () => {
     btnSend.style.backgroundColor = 'var(--green)'
     btnSend.style.boxShadow = 'none'
-})
-
-const projectPics = document.querySelectorAll('.project-img')
-projectPics.forEach(pic => {
-    pic.addEventListener('mouseover', () => {
-        const theme = document.getElementById('themeBtn').className
-        if (theme == 'light') {
-            pic.src = `assets/${pic.id}col.png`
-        } else if (theme == 'dark') {
-            pic.src = `assets/dark/${pic.id}col.png`
-        }
-    })
-
-    pic.addEventListener('mouseout', () => {
-        const theme = document.getElementById('themeBtn').className
-        if (theme == 'light') {
-            pic.src = `assets/${pic.id}.png`
-        } else if (theme == 'dark') {
-            pic.src = `assets/dark/${pic.id}.png`
-        }
-
-        
-    })
 })
 
 // Theme Change
@@ -114,7 +163,7 @@ function changeColorTheme(mode) {
 
         // lamps color
         document.querySelectorAll('.lamp').forEach(lamp => {
-            lamp.src = `assets/${lamp.id}_d.png`
+            lamp.src = `assets/dark/${lamp.id}.png`
         })
 
         //home page
@@ -136,13 +185,18 @@ function changeColorTheme(mode) {
         // change about page
         document.getElementById('aboutText').src = "assets/dark/aboutText.png"
         document.getElementById('myPlaylist').src = "assets/dark/playlist.png"
+        document.getElementById('playlist').src = "assets/dark/spotify.png"
         // change projects page
-        document.getElementById('pic1').src = "assets/dark/pic1.png"
-        document.getElementById('pic2').src = "assets/dark/pic2.png"
-        document.getElementById('pic3').src = "assets/dark/pic3.png"
-        document.getElementById('desc1').src = "assets/dark/proj1.png"
-        document.getElementById('desc2').src = "assets/dark/proj2.png"
-        document.getElementById('desc3').src = "assets/dark/proj3.png"
+        document.getElementById('project-img1').src = "assets/dark/project-img1.png"
+        document.getElementById('project-img2').src = "assets/dark/project-img2.png"
+        document.getElementById('project-img3').src = "assets/dark/project-img3.png"
+        document.getElementById('project-desc1').src = "assets/dark/project-desc1.png"
+        document.getElementById('project-desc2').src = "assets/dark/project-desc2.png"
+        document.getElementById('project-desc3').src = "assets/dark/project-desc3.png"
+        document.getElementById('live').style.color = 'var(--light)'
+        document.getElementById('comingsoon').style.color = 'var(--light)'
+        document.querySelectorAll('.small-header').forEach(sh => { sh.style.color = 'var(--light)' })
+        document.querySelectorAll('.orange').forEach(o => { o.className = 'orange_d' })
         // change contact page
         document.getElementById('formIntro').src = "assets/dark/formIntro.png"
         document.getElementById('form').className = "form_d"
@@ -186,19 +240,24 @@ function changeColorTheme(mode) {
             greens[i].classList.add("green")
         }
         //change headers
-        document.querySelectorAll('.header').forEach(h => {
-            h.className = 'header_d'
+        document.querySelectorAll('.header_d').forEach(h => {
+            h.className = 'header'
         })
         // about
         document.getElementById('aboutText').src = "assets/aboutText.png"
         document.getElementById('myPlaylist').src = "assets/playlist.png"
+        document.getElementById('playlist').src = "assets/spotify.png"
         // projects
-        document.getElementById('pic1').src = "assets/pic1.png"
-        document.getElementById('pic2').src = "assets/pic2.png"
-        document.getElementById('pic3').src = "assets/pic3.png"
-        document.getElementById('desc1').src = "assets/proj1.png"
-        document.getElementById('desc2').src = "assets/proj2.png"
-        document.getElementById('desc3').src = "assets/proj3.png"
+        document.getElementById('project-img1').src = "assets/project-img1.png"
+        document.getElementById('project-img2').src = "assets/project-img2.png"
+        document.getElementById('project-img3').src = "assets/project-img3.png"
+        document.getElementById('project-desc1').src = "assets/project-desc1.png"
+        document.getElementById('project-desc2').src = "assets/project-desc2.png"
+        document.getElementById('project-desc3').src = "assets/project-desc3.png"
+        document.getElementById('live').style.color = 'var(--brown)'
+        document.getElementById('comingsoon').style.color = 'var(--brown)'
+        document.querySelectorAll('.small-header').forEach(sh => { sh.style.color = 'var(--brown)' })
+        document.querySelectorAll('.orange_d').forEach(o => { o.className = 'orange' })
         // contact
         document.getElementById('formIntro').src = "assets/formIntro.png"
         document.getElementById('form').className = "form"
