@@ -1,3 +1,6 @@
+window.addEventListener('load', resizeWindow)
+window.addEventListener('resize', resizeWindow)
+
 // Lamp hover events
 const hovers = document.querySelectorAll('.hover')
 hovers.forEach(hover => {
@@ -15,66 +18,71 @@ hovers.forEach(hover => {
         } else if (theme == 'dark') {
             lamp.src = `assets/dark/lamp${hover.id}.png`
         }
-
-        lamp.style.top = '0'
+        if (window.innerWidth > 500) {
+            lamp.style.top = '0'
+        }
     })
 })
+
+function navHover(evt) {
+    button = evt.currentTarget
+    document.getElementById(`${button.id}Underline`).style.display = 'block'
+
+    if (button.id == 'btnAbout') {
+        const lamp = document.getElementById('lampOrange')
+        lamp.src = `assets/${lamp.id}On.png`
+        lamp.style.top = '50px'
+    } else if (button.id == 'btnProjects') {
+        const lamp = document.getElementById('lampBlue')
+        lamp.src = `assets/${lamp.id}On.png`
+        lamp.style.top = '50px'
+    } else if (button.id == 'btnContact') {
+        const lamp = document.getElementById('lampPink')
+        lamp.src = `assets/${lamp.id}On.png`
+        lamp.style.top = '50px'
+    } else if (button.id == 'btnResume') {
+        const lamp = document.getElementById('lampPurple')
+        lamp.src = `assets/${lamp.id}On.png`
+        lamp.style.top = '50px'
+    }
+}
+
+function navMouseOut(evt) {
+    document.getElementById(`${button.id}Underline`).style.display = 'none'
+
+    const theme = document.getElementById('themeBtn').className
+
+    if (button.id == 'btnAbout') {
+        const lamp = document.getElementById('lampOrange')
+        if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
+        else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+        lamp.style.top = '0'
+    }
+    else if (button.id == 'btnProjects') {
+        const lamp = document.getElementById('lampBlue')
+        if (theme == 'light')  { lamp.src = `assets/${lamp.id}.png` }
+        else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+        lamp.style.top = '0'
+    }
+    else if (button.id == 'btnContact') {
+        const lamp = document.getElementById('lampPink')
+        if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
+        else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+        lamp.style.top = '0'
+    }
+    else if (button.id == 'btnResume') {
+        const lamp = document.getElementById('lampPurple')
+        if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
+        else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
+        lamp.style.top = '0'
+    }
+}
 
 // Nav button hover events
 const navButtons = document.querySelectorAll('.navBtnEvents')
 navButtons.forEach(button => {
-    button.addEventListener('mouseover', () => {
-        document.getElementById(`${button.id}Underline`).style.display = 'block'
-
-        if (button.id == 'btnAbout') {
-            const lamp = document.getElementById('lampOrange')
-            lamp.src = `assets/${lamp.id}On.png`
-            lamp.style.top = '50px'
-        } else if (button.id == 'btnProjects') {
-            const lamp = document.getElementById('lampBlue')
-            lamp.src = `assets/${lamp.id}On.png`
-            lamp.style.top = '50px'
-        } else if (button.id == 'btnContact') {
-            const lamp = document.getElementById('lampPink')
-            lamp.src = `assets/${lamp.id}On.png`
-            lamp.style.top = '50px'
-        } else if (button.id == 'btnResume') {
-            const lamp = document.getElementById('lampPurple')
-            lamp.src = `assets/${lamp.id}On.png`
-            lamp.style.top = '50px'
-        }
-    })
-
-    button.addEventListener('mouseout', () => {
-        document.getElementById(`${button.id}Underline`).style.display = 'none'
-
-        const theme = document.getElementById('themeBtn').className
-
-        if (button.id == 'btnAbout') {
-            const lamp = document.getElementById('lampOrange')
-            if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
-            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
-            lamp.style.top = '0'
-        }
-        else if (button.id == 'btnProjects') {
-            const lamp = document.getElementById('lampBlue')
-            if (theme == 'light')  { lamp.src = `assets/${lamp.id}.png` }
-            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
-            lamp.style.top = '0'
-        }
-        else if (button.id == 'btnContact') {
-            const lamp = document.getElementById('lampPink')
-            if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
-            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
-            lamp.style.top = '0'
-        }
-        else if (button.id == 'btnResume') {
-            const lamp = document.getElementById('lampPurple')
-            if (theme == 'light') { lamp.src = `assets/${lamp.id}.png` }
-            else if (theme == 'dark') { lamp.src = `assets/dark/${lamp.id}.png` }
-            lamp.style.top = '0'
-        }
-    })
+    button.addEventListener('mouseover', navHover) 
+    button.addEventListener('mouseout', navMouseOut) 
 })
 
 // Resume link
@@ -265,3 +273,43 @@ function changeColorTheme(mode) {
         themeBtn.className = "light"
     }
 }
+
+function resizeWindow() {
+    if (window.innerWidth < 500 || screen.width < 500) {
+        document.getElementById('lampOrange').style.top = '-20px'
+        document.getElementById('lampPurple').style.top = '50px'
+        document.getElementById('lampPink').style.top = '15px'
+        document.getElementById('projects-header').style.top = '70px'
+        const navButtons = document.querySelectorAll('.navBtnEvents')
+        navButtons.forEach(btn => { 
+            btn.removeEventListener('mouseover', navHover)
+            btn.removeEventListener('mouseout', navMouseOut) 
+        })
+    }
+}
+
+function toggleMobileMenu(menu) {
+    menu.classList.toggle('open')
+}
+
+document.getElementById('project-mobile-img1').addEventListener('click', () => {
+    document.getElementById('projects-header').style.display = 'none'
+    document.querySelector('.project-mobile-images').style.display = 'none'
+    document.querySelector('.remta-page').style.display = 'block'
+    document.getElementById('remta-header').style.display = 'block'
+})
+
+document.getElementById('remta-back-btn').addEventListener('click', () => {
+    document.getElementById('projects-header').style.display = 'block'
+    document.querySelector('.project-mobile-images').style.display = 'flex'
+    document.querySelector('.remta-page').style.display = 'none'
+    document.getElementById('remta-header').style.display = 'none'
+})
+
+document.getElementById('resume-btn').addEventListener('click', () => {
+    window.open("https://drive.google.com/file/d/1ZZ1ZRyseZQNzLR09vEH5gW3vftXYnLwn/view?usp=share_link")
+})
+
+document.getElementById('remta-btn').addEventListener('click', () => {
+    window.open("https://remtadesign.store")
+})

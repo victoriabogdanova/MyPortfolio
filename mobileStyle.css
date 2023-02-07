@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap');
+
+@media (max-width: 500px) {
+    :root {
+        --brown: #604037;
+        --green: #5A946A;
+        --light: #eef1f4;
+        --green_d: #75C58B;
+        --bgcolor: #faeee7;
+        --bgcolorDM: #2C2930;
+        --big-font: 58px;
+        --small-font: 22px;
+        --josefin: 'Josefin Sans', sans-serif;
+        --inter: 'Inter', sans-serif;
+    }
+
+    body {
+        width: 100vw;
+        height: 100%;
+        overflow: hidden;
+    }
+    .home {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        margin-bottom: 0;
+        z-index: 1;
+    }
+
+    .header {
+        font-size: 25px;
+        top: 70px;
+    }
+    
+    .nav {
+        display: none;
+    }
+    #long-line {
+        display: none;
+    }
+    #lampYellow, #lampBlue, #Yellow, #Blue {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        top: 36px;
+        text-align: center;
+        text-decoration: underline;
+        background-color: rgba(0, 0, 0, 0.3);
+        /* z-index: -1; */
+    }
+
+    #btnAbout, #btnProjects, #btnContact {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgba(250, 238, 231, 0.9);
+        margin: 0;
+        top: 0;
+    }
+
+    #mobileThemeBtn {
+        display: block;
+        position: relative;
+        float: right;
+        right: 35px;
+        top: 8px;
+    }
+
+    #short-line {
+        width: 100%;
+    }
+
+    .portrait-container {
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 300px;
+    }
+
+    #logo {
+        position: relative;
+        bottom: 25px;
+        right: 140px;
+    }
+
+    #lampOrange {
+        width: fit-content;
+        height: fit-content;
+        left: 37%;
+    }
+    #lampPurple {
+        width: fit-content;
+        height: fit-content;
+        left: 0;
+    }
+    #lampPink {
+        width: fit-content;
+        height: fit-content;
+        left: 70%;
+    }
+    .intro {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 67%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bigIntro {
+        width: 290px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .bigText {
+        line-height: 35px;
+        font-size: 32px;
+    }
+    #p1, #p2 {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    .smallIntro {
+        display: flex;
+        width: 100%;
+        margin-top: 30px;
+    }
+    #smallIntro {
+        margin: 0 auto;
+    }
+    #resume-btn {
+        display: block;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+
+    #about {
+        height: 100vh;
+    }
+    #about-header {
+        /* margin-top: 0; */
+        top: 70px;
+    }
+    #aboutText {
+        position: relative;
+        top: -30px;
+        margin-bottom: 30px;
+    }
+
+
+    #live {
+        display: none;
+    }
+    #comingsoon {
+        display: none;
+    }
+    #project-btn1 {
+        display: none;
+    }
+    .project {
+        display: none;
+    }
+
+    .project-mobile-images {
+        width: 100%;
+        height: 620px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 12%;
+    }
+    .project-mobile-img {
+        cursor: pointer;
+    }
+    #project-mobile-img1 {
+        margin-bottom: 30px;
+    }
+    #project-mobile-img2 {
+        margin-bottom: 30px;
+    }
+
+
+    .remta-page {
+        width: 100%;
+        height: 100%;
+        background-color: var(--bgcolor);
+    }
+    .remta-page .content {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #remta-img {
+        margin-top: 20px;
+        border: 1px solid var(--brown);
+        border-radius: 30px;
+    }
+    .role {
+        display: flex;
+        width: fit-content;
+        margin-top: 30px;
+    }
+    .timeline {
+        display: flex;
+        width: fit-content;
+        margin-bottom: 30px;
+    }
+    .small-header {
+        font-weight: 700;
+    }
+    #remta-btn {
+        margin-top: 40px;
+        cursor: pointer;
+    }
+    #remta-back-btn {
+        position: relative;
+        top: 20px;
+        left: 10px;
+        cursor: pointer;
+    }
+
+
+    #contact {
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+    }
+    #contact-header {
+        top: 70px;
+    }
+    .contact {
+        position: relative;
+        top: 10%;
+    }
+    .form {
+        width: 320px;
+        height: 500px;
+        padding-top: 20px;
+        margin-top: 30px;
+    }
+    .input-placeholder {
+        height: 40px;
+    }
+    .input {
+        height: 40px;
+    }
+    .placeholder {
+        font-size: 14px;
+    }
+    #messagelbl {
+        margin-left: 30px;
+    }
+    #message {
+        padding-bottom: 150px;
+    }
+    #send {
+        width: 115px;
+        height: 45px;
+    }
+
+    #Orange, #Pink, #Purple {
+        display: none;
+    }
+}

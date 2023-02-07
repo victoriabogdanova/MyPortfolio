@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="mobileStyle.css" rel="stylesheet" type="text/css" media="(max-device-width: 500px)" />
+    <link href="tabletStyle.css" rel="stylesheet" type="text/css" media="(min-device-width: 501px) and (max-device-width: 1300px)" />
     <title>Victoria's Portfolio</title>
 </head>
 <body>
     <div class="nav-container">
         <nav class="nav">
-            <!-- <div><img id="themeBtn" class="light" src="assets/moon.png"></div> -->
             <ul>
-                <li><img id="themeBtn" class="light" src="assets/moon.png"></li>
+                <li>
+                    <img id="themeBtn" class="light" src="assets/moon.png">
+                </li>
                 <li id="btnAbout" class="nav-button navBtnEvents">
                     <a class="nav-a" href="#about">About</a>
                     <div id="btnAboutUnderline" class="underline"></div>
@@ -30,11 +33,30 @@
                     <div id="btnResumeUnderline" class="underline"></div>
                 </li>
             </ul>
-            <!-- <button id="btnResume" class="nav-button">Resume</button> -->
         </nav>
+        <div id="mobileThemeBtn"><img id="mobileThemeBtn" class="light" src="assets/mobile/moon.png"></div>
+        <div id="hamburger-menu"  onclick="toggleMobileMenu(this)">
+            <img id="hamburger-menu-img" src="assets/mobile/menu.png" alt="">
+            <ul class="mobile-menu">
+                <li id="btnAbout" class="nav-button navBtnEvents">
+                    <a class="nav-a" href="#about">About</a>
+                </li>
+                <li id="btnProjects" class="nav-button navBtnEvents">
+                    <a class="nav-a" href="#projects">Projects</a>
+                </li>
+                <li id="btnContact" class="nav-button navBtnEvents">
+                    <a class="nav-a" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
         <div id="short-line" class="line_l"></div>
         <div class="logo">
-            <a href="#home"><img id="logo" src="assets/VB_l.png" alt="VB"></a>
+            <a href="#home">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="assets/mobile/vb.png">
+                    <img id="logo" src="assets/VB_l.png" alt="VB">
+                </picture>
+            </a>
         </div>
         <div id="long-line" class="line_l"></div>
     </div>
@@ -43,20 +65,32 @@
             <img id="lampYellow" src="assets/lampYellow.png" class="lamp"/>
             <div id="Yellow" class="hover hoverYellow"></div>
 
-            <img id="lampOrange" src="assets/lampOrange.png" class="lamp"/>
+            <picture>
+                <source media="(max-width: 500px)" srcset="assets/mobile/lampOrange.png">
+                <img id="lampOrange" src="assets/lampOrange.png" class="lamp"/>
+            </picture>
             <div id="Orange" class="hover hoverOrange"></div>
 
             <img id="lampBlue" src="assets/lampBlue.png" class="lamp"/>
             <div id="Blue" class="hover hoverBlue"></div>
 
-            <img id="lampPink" src="assets/lampPink.png" class="lamp"/>
+            <picture>
+                <source media="(max-width: 500px)" srcset="assets/mobile/lampPink.png">
+                <img id="lampPink" src="assets/lampPink.png" class="lamp"/>
+            </picture>
             <div id="Pink" class="hover hoverPink"></div>
 
-            <img id="lampPurple" src="assets/lampPurple.png" class="lamp"/>
+            <picture>
+                <source media="(max-width: 500px)" srcset="assets/mobile/lampPurple.png">
+                <img id="lampPurple" src="assets/lampPurple.png" class="lamp"/>
+            </picture>
             <div id="Purple" class="hover hoverPurple"></div>
 
             <div class="portrait-container">
-                <img class="portrait" src="assets/portrait.png" alt=""/>
+                <picture>
+                    <source media="(max-width: 500px)" srcset="assets/mobile/portrait.png">
+                    <img class="portrait" src="assets/portrait.png" alt=""/>
+                </picture>
             </div>
             <div class="intro">
                 <div class="bigIntro">
@@ -65,16 +99,29 @@
                     <p class="bigText" id="p2">My  name  is </p>
                     <p class="bigText green">Victoria</p><br>
                 </div>
-                <img id="smallIntro" src="assets/smallIntro.png" alt="">
+                <picture class="smallIntro">
+                    <source media="(max-width: 500px)" srcset="assets/mobile/smallIntro.png">
+                    <img id="smallIntro" src="assets/smallIntro.png" alt="">
+                </picture>
+                <img id="resume-btn" src="assets/mobile/resume-btn.png" alt="Download Resume">
             </div>
         </div>
     </section>
     <section class="section" id="about">
         <h1 id="about-header" class="header">I'm Vicky</h1>
         <div class="about">
-            <img id="aboutText" class="img" src="assets//aboutText.png" alt="A freelance  UX/UI  designer currently helping small businesses in my hometown establish a digital presence and connect better with their customers. My journey started in 2022 when I discovered the Google UX Design Certificate and immediately fell in love with the field. Since then I've been combining the knowledge in psychology with my previous experience in customer-facing positions to design with real people in mind. As someone with an INFJ personality type my main motivation is to be the empathetic link between a product and its users. I care deeply about human behavior and how it influences our design decisions,  which is why I'm very passionate about research. By putting away our own opinions and listening to what others have to say we acquire a new understanding that is often the key to improvement. I think this notion allows not only empathy, but also equity and accessibility to become a part of the story. When I'm not working I like spending quality time with my friends and family, but you can also find me sitting at my desk listening to music while I'm reading, drawing or playing video games.">
-            <img id="myPlaylist" class="img"  src="assets/playlist.png" alt="My current playlist">
-            <img id="playlist" src="assets/spotify.png" alt="spotify playlist">
+            <picture>
+                <source media="(max-width: 500px)" srcset="assets/mobile/aboutText.png">
+                <img id="aboutText" class="img" src="assets/aboutText.png" alt="A freelance  UX/UI  designer currently helping small businesses in my hometown establish a digital presence and connect better with their customers. My journey started in 2022 when I discovered the Google UX Design Certificate and immediately fell in love with the field. Since then I've been combining the knowledge in psychology with my previous experience in customer-facing positions to design with real people in mind. As someone with an INFJ personality type my main motivation is to be the empathetic link between a product and its users. I care deeply about human behavior and how it influences our design decisions,  which is why I'm very passionate about research. By putting away our own opinions and listening to what others have to say we acquire a new understanding that is often the key to improvement. I think this notion allows not only empathy, but also equity and accessibility to become a part of the story. When I'm not working I like spending quality time with my friends and family, but you can also find me sitting at my desk listening to music while I'm reading, drawing or playing video games.">
+            </picture>
+            <picture>
+                <source media="(max-width: 500px)" srcset="assets/mobile/playlist.png">
+                <img id="myPlaylist" class="img"  src="assets/playlist.png" alt="My current playlist">
+            </picture>
+            <picture>
+                <source media="(max-width: 500px)" srcset="assets/mobile/spotify.png">
+                <img id="playlist" src="assets/spotify.png" alt="spotify playlist">
+            </picture>
         </div>
     </section>
     <section class="section" id="projects">
@@ -109,35 +156,30 @@
                 <img id="project-desc3" class="desc" src="assets/project-desc3.png" alt="SALVATION is a non-profit organization that helps the stray animals in my hometown find their forever homes. I am building a mobile application as a part of the Google UX Design course with the hopes of helping them spread their message and help more animals .The end goal is to create a space that allows people to adopt or foster an animal, donate to a cause or volunteer at the organization’s shelter.">
             </div>
         </div>
-
-
-
-        <!-- <div class="projects">
-            <div class="project">
-                <img id="pic1" class="project-img" src="assets/pic1.png" alt="">
-                <div class="project-desc-btn">
-                    <img id="desc1" class="project-desc" src="assets/proj1.png" alt="">
-                    <img id="proj1btn" src="assets/proj1btn.png" alt="">
-                </div>
+        <div class="project-mobile-images">
+            <img id="project-mobile-img1" class="project-mobile-img" src="assets/mobile/project-img1.png" alt="">
+            <img id="project-mobile-img2" class="project-mobile-img" src="assets/mobile/project-img2.png" alt="">
+            <img id="project-mobile-img3" class="project-mobile-img" src="assets/mobile/project-img3.png" alt="">
+        </div>
+        <div class="remta-page">
+            <h1 id="remta-header" class="header">REMTA</h1>
+            <img id="remta-back-btn" src="assets/mobile/remta-back-btn.png" alt="back">
+            <div class="content">
+                <img id="remta-img" src="assets/mobile/remta-img.png" alt="">
+                <div class="role"><p class="small-header">Role: </p><p class="orange"> UI Designer, Visual Designer</p></div>
+                <div class="timeline"><p class="small-header">Timeline: </p><p class="orange"> December 2022 - January 2023</p></div>
+                <img id="remta-desc" src="assets/mobile/remta-desc.png" alt="">
+                <img id="remta-btn" src="assets/mobile/remta-btn.png" alt="Visit Website">
             </div>
-            <div class="project">
-                <img id="pic2" class="project-img" src="assets/pic2.png" alt="">
-                <div class="project-desc-btn">
-                    <img id="desc2" class="project-desc" src="assets/proj2.png" alt="">
-                </div>
-            </div>
-            <div class="project">
-                <img id="pic3" class="project-img" src="assets/pic3.png" alt="">
-                <div class="project-desc-btn">
-                    <img id="desc3" class="project-desc" src="assets/proj3.png" alt="">
-                </div>
-            </div>
-        </div> -->
+        </div>
     </section>
     <section class="section" id="contact">
         <h1 id="contact-header" class="header">Contact</h1>
         <div class="contact">
-            <img id="formIntro" class="img" src="assets/formIntro.png" alt="Have an interesting project for me or just want to chat? Drop me a line!">
+            <picture>
+                <source media="(max-width: 500px)" srcset="assets/mobile/form-intro.png">
+                <img id="formIntro" class="img" src="assets/formIntro.png" alt="Have an interesting project for me or just want to chat? Drop me a line!">
+            </picture>
             <form action="https://formsubmit.co/victoria.p.bogdanova@gmail.com" method="POST" id="form" class="form" encType="multipart/form-data">
                 <div class="input-placeholder">
                     <input name="name" id="name" class="input" type="text" required>
