@@ -24,6 +24,7 @@ hovers.forEach(hover => {
     })
 })
 
+// Nav button hover events with lamps
 function navHover(evt) {
     button = evt.currentTarget
     document.getElementById(`${button.id}Underline`).style.display = 'block'
@@ -119,10 +120,10 @@ projectImgs.forEach(img => {
 
 // Project button hover and click events
 const projectBtn1 = document.getElementById('project-btn1')
-projectBtn1.addEventListener('mouseover', () => {
+projectBtn1.addEventListener('mousedown', () => {
     projectBtn1.src = 'assets/project-btn1-pressed.png'
 })
-projectBtn1.addEventListener('mouseout', () => {
+projectBtn1.addEventListener('mouseup', () => {
     projectBtn1.src = 'assets/project-btn1.png'
 })
 projectBtn1.addEventListener('click', () => {
@@ -143,6 +144,8 @@ btnSend.addEventListener('mouseup', () => {
 // Theme Change
 const themeBtn = document.getElementById('themeBtn')
 themeBtn.addEventListener('click', () => changeColorTheme(themeBtn.className))
+const mobileThemeBtn = document.getElementById('mobileThemeBtn')
+mobileThemeBtn.addEventListener('click', () => changeColorTheme(mobileThemeBtn.className))
 
 function changeColorTheme(mode) {
     // switch to dark
@@ -151,7 +154,6 @@ function changeColorTheme(mode) {
         document.querySelector('.nav-container').style.backgroundColor = "var(--bgcolorDM)"
         document.querySelector('nav').style.backgroundColor = "var(--bgcolorDM)"
         document.body.style.backgroundColor = "var(--bgcolorDM)"
-
         // change nav button color
         document.getElementById('themeBtn').src = "assets/sun.png"
         document.querySelectorAll('.nav-a').forEach(btn => {
@@ -161,31 +163,26 @@ function changeColorTheme(mode) {
         document.querySelectorAll('.underline').forEach(u => {
             u.style.border = '2px solid var(--green_d)'
         })
-
         // line color
         document.querySelectorAll('.line_l').forEach(line => {
             line.className = 'line_d'
         })
         // logo color
         document.getElementById('logo').src = 'assets/VB_d.png'
-
         // lamps color
         document.querySelectorAll('.lamp').forEach(lamp => {
             lamp.src = `assets/dark/${lamp.id}.png`
         })
-
         //home page
         document.querySelector('.portrait').src = "assets/portrait_d.png"
         document.querySelector('.bigIntro').className = 'bigIntro_d'
         document.getElementById('smallIntro').src = "assets/dark/smallIntro.png"
-
         // all greens
         let greens = document.querySelectorAll('.green')
         for (let i=0; i < greens.length; i++) {
             greens[i].classList.remove("green")
             greens[i].classList.add("green_d")
         }
-
         //change headers
         document.querySelectorAll('.header').forEach(h => {
             h.className = 'header_d'
@@ -208,8 +205,46 @@ function changeColorTheme(mode) {
         // change contact page
         document.getElementById('formIntro').src = "assets/dark/formIntro.png"
         document.getElementById('form').className = "form_d"
-
+        //mobile
+        if (window.innerWidth <= 500) {
+            document.getElementById('logo_mobile').srcset = 'assets/mobile/dark/vb.png'
+            mobileThemeBtn.src = 'assets/mobile/dark/sun.png'
+            if (document.getElementById('hamburger-menu').classList.contains('open'))
+            {
+                document.getElementById('hamburger-menu-img').src = 'assets/mobile/dark/x.png'
+            } else {
+                document.getElementById('hamburger-menu-img').src = 'assets/mobile/dark/menu.png'
+            }
+            document.querySelectorAll('.nav-button').forEach(btn => {
+                btn.style.backgroundColor = 'rgba(44, 41, 48, 0.9)'
+            })
+            document.querySelector('.mobile-menu').style.textDecorationColor = 'var(--light)'
+            document.getElementById('lampOrange_mobile').srcset = 'assets/mobile/dark/lampOrange.png'
+            document.getElementById('lampOrange').style.top = '8px'
+            document.getElementById('lampPink_mobile').srcset = 'assets/mobile/dark/lampPink.png'
+            document.getElementById('lampPurple_mobile').srcset = 'assets/mobile/dark/lampPurple.png'
+            document.getElementById('portrait_mobile').srcset = 'assets/mobile/dark/portrait.png'
+            document.getElementById('smallIntro_mobile').srcset = 'assets/mobile/dark/smallIntro.png'
+            document.getElementById('resume-btn').src = 'assets/mobile/dark/resume-btn.png'
+            document.getElementById('aboutText_mobile').srcset = 'assets/mobile/dark/aboutText.png'
+            document.getElementById('myPlaylist_mobile').srcset = 'assets/mobile/dark/playlist.png'
+            document.getElementById('playlist_mobile').srcset = 'assets/mobile/dark/spotify.png'
+            document.getElementById('project-mobile-img1').src = 'assets/mobile/dark/project-mobile-img1.png'
+            document.getElementById('project-mobile-img2').src = 'assets/mobile/dark/project-mobile-img2.png'
+            document.getElementById('project-mobile-img3').src = 'assets/mobile/dark/project-mobile-img3.png'
+            document.getElementById('form-intro').srcset = 'assets/mobile/dark/form-intro.png'
+            document.getElementById('form').className = 'form_d'
+            document.getElementById('messagelbl').classList.remove('messagelbl')
+            document.getElementById('messagelbl').classList.add('messagelbl_d')
+            document.getElementById('send').style.backgroundColor = 'var(--green_d)'
+            document.getElementById('remta-back-btn').src = 'assets/mobile/dark/remta-back-btn.png'
+            document.getElementById('remta-desc').src = 'assets/mobile/dark/remta-desc.png'
+            document.getElementById('remta-btn').src = 'assets/mobile/dark/remta-btn.png'
+            document.querySelector('.remta-page').style.backgroundColor = 'var(--bgcolorDM)'
+        }
+        // change theme class
         themeBtn.className = "dark"
+        mobileThemeBtn.className = 'dark'
     } 
     else if (mode == "dark")    // switch to light
     { 
@@ -217,7 +252,6 @@ function changeColorTheme(mode) {
         document.querySelector('nav').style.backgroundColor = "var(--bgcolor)"
         document.querySelector('.nav-container').style.backgroundColor = "var(--bgcolor)"
         document.body.style.backgroundColor = "var(--bgcolor)"
-
         // nav
         document.getElementById('themeBtn').src = "assets/moon.png"
         document.querySelectorAll('.nav-a').forEach(btn => {
@@ -227,7 +261,6 @@ function changeColorTheme(mode) {
         document.querySelectorAll('.underline').forEach(u => {
             u.style.border = '2px solid var(--green)'
         })
-
         // lines-logo
         document.querySelectorAll('.line_d').forEach(line => {
             line.className = 'line_l'
@@ -269,8 +302,46 @@ function changeColorTheme(mode) {
         // contact
         document.getElementById('formIntro').src = "assets/formIntro.png"
         document.getElementById('form').className = "form"
-
+        // mobile
+        if (window.innerWidth <= 500) {
+            document.getElementById('logo_mobile').srcset = 'assets/mobile/vb.png'
+            mobileThemeBtn.src = 'assets/mobile/moon.png'
+            if (document.getElementById('hamburger-menu').classList.contains('open'))
+            {
+                document.getElementById('hamburger-menu-img').src = 'assets/mobile/x.png'
+            } else {
+                document.getElementById('hamburger-menu-img').src = 'assets/mobile/menu.png'
+            }
+            document.querySelectorAll('.nav-button').forEach(btn => {
+                btn.style.backgroundColor = 'rgba(250, 238, 231, 0.9)'
+            })
+            document.querySelector('.mobile-menu').style.textDecorationColor = 'var(--light)'
+            document.getElementById('lampOrange_mobile').srcset = 'assets/mobile/lampOrange.png'
+            document.getElementById('lampOrange').style.top = '-20px'
+            document.getElementById('lampPink_mobile').srcset = 'assets/mobile/lampPink.png'
+            document.getElementById('lampPurple_mobile').srcset = 'assets/mobile/lampPurple.png'
+            document.getElementById('portrait_mobile').srcset = 'assets/mobile/portrait.png'
+            document.getElementById('smallIntro_mobile').srcset = 'assets/mobile/smallIntro.png'
+            document.getElementById('resume-btn').src = 'assets/mobile/resume-btn.png'
+            document.getElementById('aboutText_mobile').srcset = 'assets/mobile/aboutText.png'
+            document.getElementById('myPlaylist_mobile').srcset = 'assets/mobile/playlist.png'
+            document.getElementById('playlist_mobile').srcset = 'assets/mobile/spotify.png'
+            document.getElementById('project-mobile-img1').src = 'assets/mobile/project-mobile-img1.png'
+            document.getElementById('project-mobile-img2').src = 'assets/mobile/project-mobile-img2.png'
+            document.getElementById('project-mobile-img3').src = 'assets/mobile/project-mobile-img3.png'
+            document.getElementById('form-intro').srcset = 'assets/mobile/form-intro.png'
+            document.getElementById('form').className = 'form'
+            document.getElementById('messagelbl').classList.remove('messagelbl_d')
+            document.getElementById('messagelbl').classList.add('messagelbl')
+            document.getElementById('send').style.backgroundColor = 'var(--green)'
+            document.getElementById('remta-back-btn').src = 'assets/mobile/remta-back-btn.png'
+            document.getElementById('remta-desc').src = 'assets/mobile/remta-desc.png'
+            document.getElementById('remta-btn').src = 'assets/mobile/remta-btn.png'
+            document.querySelector('.remta-page').style.backgroundColor = 'var(--bgcolor)'
+        }
+        // change theme class
         themeBtn.className = "light"
+        mobileThemeBtn.className = 'light'
     }
 }
 
@@ -288,8 +359,25 @@ function resizeWindow() {
     }
 }
 
+let mobileMenuOpen = false
+
 function toggleMobileMenu(menu) {
     menu.classList.toggle('open')
+    if (!mobileMenuOpen) {
+        if (mobileThemeBtn.className == 'light') {
+            document.getElementById('hamburger-menu-img').src = 'assets/mobile/x.png'
+        } else if (mobileThemeBtn.className == 'dark') {
+            document.getElementById('hamburger-menu-img').src = 'assets/mobile/dark/x.png'
+        }
+        mobileMenuOpen = true
+    } else {
+        if (mobileThemeBtn.className == 'light') {
+            document.getElementById('hamburger-menu-img').src = 'assets/mobile/menu.png'
+        } else if (mobileThemeBtn.className == 'dark') {
+            document.getElementById('hamburger-menu-img').src = 'assets/mobile/dark/menu.png'
+        }
+        mobileMenuOpen = false
+    }
 }
 
 document.getElementById('project-mobile-img1').addEventListener('click', () => {

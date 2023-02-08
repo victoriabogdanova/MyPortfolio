@@ -30,6 +30,12 @@
     .header {
         font-size: 25px;
         top: 70px;
+        color: var(--brown);
+    }
+    .header_d {
+        font-size: 25px;
+        top: 70px;
+        color: var(--light);
     }
     
     .nav {
@@ -56,8 +62,8 @@
         top: 36px;
         text-align: center;
         text-decoration: underline;
+        text-decoration-color: var(--brown);
         background-color: rgba(0, 0, 0, 0.3);
-        /* z-index: -1; */
     }
 
     #btnAbout, #btnProjects, #btnContact {
@@ -69,12 +75,21 @@
         top: 0;
     }
 
+    .mobileThemeBtn {
+        display: block;
+        position: relative;
+        float: right;
+        right: 35px;
+        top: 8px;
+        
+    }
     #mobileThemeBtn {
         display: block;
         position: relative;
         float: right;
         right: 35px;
         top: 8px;
+        cursor: pointer;
     }
 
     #short-line {
@@ -131,6 +146,17 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        color: var(--brown);
+    }
+    .bigIntro_d {
+        width: 290px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        color: var(--light);
     }
     .bigText {
         line-height: 35px;
@@ -259,32 +285,59 @@
         top: 10%;
     }
     .form {
-        width: 320px;
+        /* width: 320px; */
+        width: 100vw;
         height: 500px;
-        padding-top: 20px;
-        margin-top: 30px;
+        /* padding-top: 20px; */
+        /* margin-top: 30px; */
+        border: none;
+        background-color: var(--bgcolor);
+    }
+    .form_d {
+        width: 100vw;
+        height: 500px;
+        border: none;
+        background-color: var(--bgcolorDM);
     }
     .input-placeholder {
         height: 40px;
     }
     .input {
         height: 40px;
+        background-color: #CCD8C8;
+        border: none;
     }
     .placeholder {
         font-size: 14px;
     }
     #messagelbl {
-        margin-left: 30px;
+        margin-left: 10%;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .messagelbl {
+        color: var(--brown);
+    }
+    .messagelbl_d {
+        color: var(--light);
     }
     #message {
         padding-bottom: 150px;
+        background-color: #CCD8C8;
+        border: none;
     }
     #send {
         width: 115px;
         height: 45px;
+        background-color: var(--green);
     }
 
     #Orange, #Pink, #Purple {
         display: none;
     }
+
+    .lamp {
+        transition: none;
+    }
+
 }

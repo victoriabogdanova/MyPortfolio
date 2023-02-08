@@ -590,9 +590,11 @@ span {
     margin-left: 90px;
     margin-bottom: 10px;
     align-self: flex-start;
-    color: var(--brown);
     font-style: var(--josefin);
     font-size: 18px;
+}
+.messagelbl {
+    color: var(--brown);
 }
 #message {
     width: 79%;
@@ -684,7 +686,7 @@ span {
     cursor: pointer;
 }
 
-#mobileThemeBtn {
+.mobileThemeBtn {
     display: none;
 }
 #resume-btn {
@@ -697,5 +699,8 @@ span {
     display: none;
 }
 .remta-page {
+    display: none;
+}
+.project-mobile-images {
     display: none;
 }

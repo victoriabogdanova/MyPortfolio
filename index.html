@@ -34,7 +34,7 @@
                 </li>
             </ul>
         </nav>
-        <div id="mobileThemeBtn"><img id="mobileThemeBtn" class="light" src="assets/mobile/moon.png"></div>
+        <div class="mobileThemeBtn"><img id="mobileThemeBtn" class="light" src="assets/mobile/moon.png"></div>
         <div id="hamburger-menu"  onclick="toggleMobileMenu(this)">
             <img id="hamburger-menu-img" src="assets/mobile/menu.png" alt="">
             <ul class="mobile-menu">
@@ -53,7 +53,7 @@
         <div class="logo">
             <a href="#home">
                 <picture>
-                    <source media="(max-width: 500px)" srcset="assets/mobile/vb.png">
+                    <source id='logo_mobile' media="(max-width: 500px)" srcset="assets/mobile/vb.png">
                     <img id="logo" src="assets/VB_l.png" alt="VB">
                 </picture>
             </a>
@@ -66,7 +66,7 @@
             <div id="Yellow" class="hover hoverYellow"></div>
 
             <picture>
-                <source media="(max-width: 500px)" srcset="assets/mobile/lampOrange.png">
+                <source id='lampOrange_mobile' media="(max-width: 500px)" srcset="assets/mobile/lampOrange.png">
                 <img id="lampOrange" src="assets/lampOrange.png" class="lamp"/>
             </picture>
             <div id="Orange" class="hover hoverOrange"></div>
@@ -75,20 +75,20 @@
             <div id="Blue" class="hover hoverBlue"></div>
 
             <picture>
-                <source media="(max-width: 500px)" srcset="assets/mobile/lampPink.png">
+                <source id='lampPink_mobile' media="(max-width: 500px)" srcset="assets/mobile/lampPink.png">
                 <img id="lampPink" src="assets/lampPink.png" class="lamp"/>
             </picture>
             <div id="Pink" class="hover hoverPink"></div>
 
             <picture>
-                <source media="(max-width: 500px)" srcset="assets/mobile/lampPurple.png">
+                <source id='lampPurple_mobile' media="(max-width: 500px)" srcset="assets/mobile/lampPurple.png">
                 <img id="lampPurple" src="assets/lampPurple.png" class="lamp"/>
             </picture>
             <div id="Purple" class="hover hoverPurple"></div>
 
             <div class="portrait-container">
                 <picture>
-                    <source media="(max-width: 500px)" srcset="assets/mobile/portrait.png">
+                    <source id='portrait_mobile' media="(max-width: 500px)" srcset="assets/mobile/portrait.png">
                     <img class="portrait" src="assets/portrait.png" alt=""/>
                 </picture>
             </div>
@@ -100,7 +100,7 @@
                     <p class="bigText green">Victoria</p><br>
                 </div>
                 <picture class="smallIntro">
-                    <source media="(max-width: 500px)" srcset="assets/mobile/smallIntro.png">
+                    <source id="smallIntro_mobile" media="(max-width: 500px)" srcset="assets/mobile/smallIntro.png">
                     <img id="smallIntro" src="assets/smallIntro.png" alt="">
                 </picture>
                 <img id="resume-btn" src="assets/mobile/resume-btn.png" alt="Download Resume">
@@ -111,15 +111,15 @@
         <h1 id="about-header" class="header">I'm Vicky</h1>
         <div class="about">
             <picture>
-                <source media="(max-width: 500px)" srcset="assets/mobile/aboutText.png">
+                <source id="aboutText_mobile" media="(max-width: 500px)" srcset="assets/mobile/aboutText.png">
                 <img id="aboutText" class="img" src="assets/aboutText.png" alt="A freelance  UX/UI  designer currently helping small businesses in my hometown establish a digital presence and connect better with their customers. My journey started in 2022 when I discovered the Google UX Design Certificate and immediately fell in love with the field. Since then I've been combining the knowledge in psychology with my previous experience in customer-facing positions to design with real people in mind. As someone with an INFJ personality type my main motivation is to be the empathetic link between a product and its users. I care deeply about human behavior and how it influences our design decisions,  which is why I'm very passionate about research. By putting away our own opinions and listening to what others have to say we acquire a new understanding that is often the key to improvement. I think this notion allows not only empathy, but also equity and accessibility to become a part of the story. When I'm not working I like spending quality time with my friends and family, but you can also find me sitting at my desk listening to music while I'm reading, drawing or playing video games.">
             </picture>
             <picture>
-                <source media="(max-width: 500px)" srcset="assets/mobile/playlist.png">
+                <source id="myPlaylist_mobile" media="(max-width: 500px)" srcset="assets/mobile/playlist.png">
                 <img id="myPlaylist" class="img"  src="assets/playlist.png" alt="My current playlist">
             </picture>
             <picture>
-                <source media="(max-width: 500px)" srcset="assets/mobile/spotify.png">
+                <source id="playlist_mobile" media="(max-width: 500px)" srcset="assets/mobile/spotify.png">
                 <img id="playlist" src="assets/spotify.png" alt="spotify playlist">
             </picture>
         </div>
@@ -157,9 +157,9 @@
             </div>
         </div>
         <div class="project-mobile-images">
-            <img id="project-mobile-img1" class="project-mobile-img" src="assets/mobile/project-img1.png" alt="">
-            <img id="project-mobile-img2" class="project-mobile-img" src="assets/mobile/project-img2.png" alt="">
-            <img id="project-mobile-img3" class="project-mobile-img" src="assets/mobile/project-img3.png" alt="">
+            <img id="project-mobile-img1" class="project-mobile-img" src="assets/mobile/project-mobile-img1.png" alt="">
+            <img id="project-mobile-img2" class="project-mobile-img" src="assets/mobile/project-mobile-img2.png" alt="">
+            <img id="project-mobile-img3" class="project-mobile-img" src="assets/mobile/project-mobile-img3.png" alt="">
         </div>
         <div class="remta-page">
             <h1 id="remta-header" class="header">REMTA</h1>
@@ -177,7 +177,7 @@
         <h1 id="contact-header" class="header">Contact</h1>
         <div class="contact">
             <picture>
-                <source media="(max-width: 500px)" srcset="assets/mobile/form-intro.png">
+                <source id="form-intro" media="(max-width: 500px)" srcset="assets/mobile/form-intro.png">
                 <img id="formIntro" class="img" src="assets/formIntro.png" alt="Have an interesting project for me or just want to chat? Drop me a line!">
             </picture>
             <form action="https://formsubmit.co/victoria.p.bogdanova@gmail.com" method="POST" id="form" class="form" encType="multipart/form-data">
@@ -193,9 +193,9 @@
                     <input name="subject" id="subject" class="input" type="text" required/>
                     <div class="placeholder">Subject<span>*</span></div>
                 </div>
-                <p id="messagelbl" class="bold">Message</p>
+                <p id="messagelbl" class="messagelbl bold">Message</p>
                 <input name="message" id="message" type="text">
-                <button id="send" class="button bold" type="submit">SEND</button>
+                <button id="send" class="send button bold" type="submit">SEND</button>
             </form>
         </div>
     </section>
