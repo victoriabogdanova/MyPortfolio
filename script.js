@@ -315,7 +315,7 @@ function changeColorTheme(mode) {
             document.querySelectorAll('.nav-button').forEach(btn => {
                 btn.style.backgroundColor = 'rgba(250, 238, 231, 0.9)'
             })
-            document.querySelector('.mobile-menu').style.textDecorationColor = 'var(--light)'
+            document.querySelector('.mobile-menu').style.textDecorationColor = 'var(--brown)'
             document.getElementById('lampOrange_mobile').srcset = 'assets/mobile/lampOrange.png'
             document.getElementById('lampOrange').style.top = '-20px'
             document.getElementById('lampPink_mobile').srcset = 'assets/mobile/lampPink.png'
